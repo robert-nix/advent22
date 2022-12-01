@@ -1,0 +1,14 @@
+input
+|> group('\n')
+|> to_optional_int
+|> delimsum
+-> sums
+
+sums
+|> max
+|> print("Part 1: ")
+
+sums
+|> topn(3)
+|> sum
+|> print("Part 2: ")
